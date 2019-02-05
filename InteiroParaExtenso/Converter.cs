@@ -8,7 +8,7 @@ namespace InteiroParaExtenso
         private Dictionary<int, string> numeroDicionario = new Dictionary<int, string>()
         {
             { 1, "um" },
-            { 2 , "dois" },
+            { 2 ,"dois" },
             { 3, "três" },
             { 4, "quatro" },
             { 5, "cinco" },
@@ -64,13 +64,13 @@ namespace InteiroParaExtenso
         {
             if (centena == 0 && dezena == 0 && unidade == 0)
             {
-                return "";
+                return string.Empty;
             }
             else if (dezena == null)
             {
                 return numeroDicionario[unidade];
             }
-            else if (centena == null)
+            else if (centena == null || centena == 0)
             {
                 if (numeroDicionario.ContainsKey((int)dezena + unidade))
                 {
